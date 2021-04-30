@@ -24,12 +24,12 @@ public class VehicleService {
     public VehicleIdListResponse getVehicleIds(DatasetIdResponse datasetIdResponse)
     {
 
-        Mono<VehicleIdListResponse> response = webClient.get()
+        return webClient.get()
                 .uri(String.format("/%s/vehicles", datasetIdResponse.getDatasetId()))
                 .retrieve()
-                .bodyToMono(VehicleIdListResponse.class);
+                .bodyToMono(VehicleIdListResponse.class)
+                .block();
 
-        return response.block();
     }
 
     //Takes in Integer vehicleId and the DatasetIdResponse and returns the Vehicle object

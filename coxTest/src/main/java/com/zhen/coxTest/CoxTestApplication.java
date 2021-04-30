@@ -8,6 +8,7 @@ public class CoxTestApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CoxTestApplication.class, args);
+
 	}
 
 }

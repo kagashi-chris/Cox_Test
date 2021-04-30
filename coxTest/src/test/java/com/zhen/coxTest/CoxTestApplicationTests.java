@@ -77,7 +77,6 @@ class CoxTestApplicationTests {
 
 		for(Vehicle v: vehicleList)
 		{
-//			Dealer dealerForVehicle = dealerMap.get(v.getDealerId());
 			dealerMap.get(v.getDealerId()).getVehicles().add(v);
 		}
 		dealersAndVehiclesForDatasetRequest.setDealers(dealerList);
